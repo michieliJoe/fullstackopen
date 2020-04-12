@@ -1,0 +1,18 @@
+title Creating a new Note (SPA)
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+
+note over server:
+Server adds new note to
+`notes` object by extracting
+data from request body, then
+saves `notes` object to data.json
+end note
+
+server-->browser: status 201 Created
+
+note over browser:
+browser executes event handler that
+was attached to the submit event
+of the form, adding the new note to the ul
+end note
